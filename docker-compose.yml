@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  chatbot:
+    build: .
+    container_name: chatbot
+    volumes:
+      - ./base_datos.json:/app/base_datos.json
+    environment:
+      - DB_PATH=/app/base_datos.json
